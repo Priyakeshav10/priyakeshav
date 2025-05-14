@@ -1,0 +1,25 @@
+import time
+
+# Input vehicle counts for each lane
+c1 = int(input("Enter count of lane 1: "))
+c2 = int(input("Enter count of lane 2: "))
+c3 = int(input("Enter count of lane 3: "))
+
+# Determine the lane with the highest count
+if c1 >= c2 and c1 >= c3:
+    highest_count_lane = 1
+elif c2 >= c1 and c2 >= c3:
+    highest_count_lane = 2
+else:
+    highest_count_lane = 3
+
+# Configure traffic lights based on the highest count
+if highest_count_lane == 1:
+    print("Lane 1 - Green, Lane 2 - Red, Lane 3 - Red")
+elif highest_count_lane == 2:
+    print("Lane 2 - Green, Lane 1 - Red, Lane 3 - Red")
+else:
+    print("Lane 3 - Green, Lane 1 - Red, Lane 2 - Red")
+
+# Simulate traffic light duration
+time.sleep(5)
